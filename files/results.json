@@ -1,0 +1,757 @@
+{
+  "mergeOne&Two": {
+    "games": [{
+        "title": "29 January",
+        "data": [{
+            "id": 557,
+            "gameId": "518d18f0-4280-11ea-83eb-eb15e39d80bd",
+            "createdAt": "2020-01-29T10:17:33.000Z",
+            "points": 2,
+            "player1": {
+              "username": "alex",
+              "score": 1,
+              "playerLeft1": 0,
+              "answers": {
+                "answer1": 1,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "marilu.menchaca",
+              "score": 1,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 1,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 556,
+            "gameId": "898a1830-427f-11ea-af57-41aeb054d769",
+            "createdAt": "2020-01-29T10:10:27.000Z",
+            "points": -3,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "lars.sujew",
+              "score": 0,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 555,
+            "gameId": "881e0510-427f-11ea-af57-41aeb054d769",
+            "createdAt": "2020-01-29T10:10:24.000Z",
+            "points": -3,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "josh.balcer",
+              "score": 0,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 554,
+            "gameId": "7cbafb10-427f-11ea-af57-41aeb054d769",
+            "createdAt": "2020-01-29T10:10:04.000Z",
+            "points": -3,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "augusto.ferrara",
+              "score": 0,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "28 January",
+        "data": [{
+            "id": 546,
+            "gameId": "895cb920-41db-11ea-9402-8191087ba8f1",
+            "createdAt": "2020-01-28T14:38:27.000Z",
+            "points": -3,
+            "player1": {
+              "username": "kostas",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft2": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 545,
+            "gameId": "df96ba00-41d8-11ea-9402-8191087ba8f1",
+            "createdAt": "2020-01-28T14:36:34.000Z",
+            "points": -3,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "fernando.orlando",
+              "score": 1,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 1,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 544,
+            "gameId": "df490f30-41d8-11ea-8d1a-f1ae601c2a7a",
+            "createdAt": "2020-01-28T14:19:02.000Z",
+            "points": -3,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "kostas",
+              "score": 0,
+              "playerLeft2": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 543,
+            "gameId": "2bc0f9f0-41d8-11ea-9402-8191087ba8f1",
+            "createdAt": "2020-01-28T14:12:21.000Z",
+            "points": -3,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "kostas",
+              "score": 0,
+              "playerLeft2": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 542,
+            "gameId": "61b0d700-41ca-11ea-a4a4-cfc152018c2f",
+            "createdAt": "2020-01-28T12:34:15.000Z",
+            "points": 4,
+            "player1": {
+              "username": "alex",
+              "score": 1,
+              "playerLeft1": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 1,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "kostas",
+              "score": 1,
+              "playerLeft2": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "27 January",
+        "data": [{
+            "id": 503,
+            "gameId": "7b800730-4118-11ea-b585-e304dee4cb70",
+            "createdAt": "2020-01-27T15:20:09.000Z",
+            "points": 1,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "pilar.armenta",
+              "score": 0,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 502,
+            "gameId": "a5de0740-40f8-11ea-b2e9-1fde3340f5a9",
+            "createdAt": "2020-01-27T15:08:20.000Z",
+            "points": 1,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "jan.philipp",
+              "score": 0,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "26 January",
+        "data": [{
+          "id": 500,
+          "gameId": "bcb911c0-4117-11ea-9cd1-77462b41fe5a",
+          "createdAt": "2020-01-26T13:32:38.000Z",
+          "points": 1,
+          "player1": {
+            "username": "alex",
+            "score": 0,
+            "playerLeft1": 0,
+            "answers": {
+              "answer1": 0,
+              "answer2": 0,
+              "answer3": 0,
+              "answer4": 0,
+              "answer5": 0
+            }
+          },
+          "player2": {
+            "username": "catharina.mauroff",
+            "score": 0,
+            "playerLeft2": 0,
+            "answers": {
+              "answer1": 0,
+              "answer2": 0,
+              "answer3": 0,
+              "answer4": 0,
+              "answer5": 0
+            }
+          }
+        }]
+      }
+    ]
+  },
+  "mergeOne&Three": {
+    "games": [{
+        "title": "30 January",
+        "data": [{
+          "id": 560,
+          "gameId": "b1a3b4c0-2169-11ea-8f0f-d1d39f0ba449",
+          "createdAt": "2020-01-30T13:32:38.000Z",
+          "points": 1,
+          "player1": {
+            "username": "alex",
+            "score": 0,
+            "playerLeft1": 0,
+            "answers": {
+              "answer1": 0,
+              "answer2": 0,
+              "answer3": 0,
+              "answer4": 0,
+              "answer5": 0
+            }
+          },
+          "player2": {
+            "username": "anja.briesenick",
+            "score": 0,
+            "playerLeft2": 0,
+            "answers": {
+              "answer1": 0,
+              "answer2": 0,
+              "answer3": 0,
+              "answer4": 0,
+              "answer5": 0
+            }
+          }
+        }]
+      },
+      {
+        "title": "29 January",
+        "data": [{
+            "id": 559,
+            "gameId": "37750780-1b33-11ea-8f0f-d1d39f0ba449",
+            "createdAt": "2020-01-29T14:54:12.000Z",
+            "points": 2,
+            "player1": {
+              "username": "alex",
+              "score": 1,
+              "playerLeft1": 0,
+              "answers": {
+                "answer1": 1,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "mohammed.unger",
+              "score": 1,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 1,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 557,
+            "gameId": "518d18f0-4280-11ea-83eb-eb15e39d80bd",
+            "createdAt": "2020-01-29T10:17:33.000Z",
+            "points": 2,
+            "player1": {
+              "username": "alex",
+              "score": 1,
+              "playerLeft1": 0,
+              "answers": {
+                "answer1": 1,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "marilu.menchaca",
+              "score": 1,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 1,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 556,
+            "gameId": "898a1830-427f-11ea-af57-41aeb054d769",
+            "createdAt": "2020-01-29T10:10:27.000Z",
+            "points": -3,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "lars.sujew",
+              "score": 0,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 555,
+            "gameId": "881e0510-427f-11ea-af57-41aeb054d769",
+            "createdAt": "2020-01-29T10:10:24.000Z",
+            "points": -3,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "josh.balcer",
+              "score": 0,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 554,
+            "gameId": "7cbafb10-427f-11ea-af57-41aeb054d769",
+            "createdAt": "2020-01-29T10:10:04.000Z",
+            "points": -3,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "augusto.ferrara",
+              "score": 0,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "28 January",
+        "data": [{
+            "id": 546,
+            "gameId": "895cb920-41db-11ea-9402-8191087ba8f1",
+            "createdAt": "2020-01-28T14:38:27.000Z",
+            "points": -3,
+            "player1": {
+              "username": "kostas",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft2": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 545,
+            "gameId": "df96ba00-41d8-11ea-9402-8191087ba8f1",
+            "createdAt": "2020-01-28T14:36:34.000Z",
+            "points": -3,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "fernando.orlando",
+              "score": 1,
+              "playerLeft2": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 1,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 544,
+            "gameId": "df490f30-41d8-11ea-8d1a-f1ae601c2a7a",
+            "createdAt": "2020-01-28T14:19:02.000Z",
+            "points": -3,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "kostas",
+              "score": 0,
+              "playerLeft2": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 543,
+            "gameId": "2bc0f9f0-41d8-11ea-9402-8191087ba8f1",
+            "createdAt": "2020-01-28T14:12:21.000Z",
+            "points": -3,
+            "player1": {
+              "username": "alex",
+              "score": 0,
+              "playerLeft1": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "kostas",
+              "score": 0,
+              "playerLeft2": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          },
+          {
+            "id": 542,
+            "gameId": "61b0d700-41ca-11ea-a4a4-cfc152018c2f",
+            "createdAt": "2020-01-28T12:34:15.000Z",
+            "points": 4,
+            "player1": {
+              "username": "alex",
+              "score": 1,
+              "playerLeft1": 0,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 1,
+                "answer4": 0,
+                "answer5": 0
+              }
+            },
+            "player2": {
+              "username": "kostas",
+              "score": 1,
+              "playerLeft2": 1,
+              "answers": {
+                "answer1": 0,
+                "answer2": 0,
+                "answer3": 0,
+                "answer4": 0,
+                "answer5": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "27 January",
+        "data": [{
+          "id": 503,
+          "gameId": "7b800730-4118-11ea-b585-e304dee4cb70",
+          "createdAt": "2020-01-27T15:20:09.000Z",
+          "points": 1,
+          "player1": {
+            "username": "alex",
+            "score": 0,
+            "playerLeft1": 0,
+            "answers": {
+              "answer1": 0,
+              "answer2": 0,
+              "answer3": 0,
+              "answer4": 0,
+              "answer5": 0
+            }
+          },
+          "player2": {
+            "username": "pilar.armenta",
+            "score": 0,
+            "playerLeft2": 0,
+            "answers": {
+              "answer1": 0,
+              "answer2": 0,
+              "answer3": 0,
+              "answer4": 0,
+              "answer5": 0
+            }
+          }
+        }]
+      }
+    ]
+  }
+}
