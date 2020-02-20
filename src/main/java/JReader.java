@@ -4,10 +4,7 @@ import org.json.simple.parser.JSONParser;
 
 import java.io.File;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class JReader {
 
@@ -18,11 +15,10 @@ public class JReader {
     }
 
     // Method to parse a given JSON file and return its content
-    public JSONObject parseFile() {
+    private JSONObject parseFile() {
 
         JSONParser jsonParser = new JSONParser();
         JSONObject jsonObject = null;
-
 
         try (FileReader fileReader = new FileReader(file)) {
 
@@ -35,81 +31,39 @@ public class JReader {
         return jsonObject;
     }
 
-    // Parses JSON content and add game ids and dates into a hashmap
-    // Game ids are considered unique so they are added as keys for deduplication
-    public Map<Long, String> getDatesAndGameIDs() {
-
-        Map<Long, String> data = new HashMap<Long, String>();
-
-        JSONObject jsonContent = parseFile();
-        JSONArray gamesArray = (JSONArray) jsonContent.get("games");
-
-        for (int i = 0; i < gamesArray.size(); i++) {
-
-            JSONObject gameObject = (JSONObject) gamesArray.get(i);
-            String date = (String) gameObject.get("title");
-
-            JSONArray dataArray = (JSONArray) gameObject.get("data");
-
-            for (int j = 0; j < dataArray.size(); j++) {
-
-                JSONObject dataObject = (JSONObject) dataArray.get(j);
-                Long id = (Long) dataObject.get("id");
-                data.put(id, date);
-            }
-        }
-        return data;
+    private JSONArray getArrayOfGames(JSONObject jsonObject) {
+        return (JSONArray) jsonObject.get("games");
     }
 
-    // Parses results file, add data in 2 separate hashmaps (depending on main object's name-value)
-    // At last, these maps are added into an arraylist
-    public List<Map<Long,String>> getAllResults() {
+    public Map<String, JSONArray> getDataFromArrayOfGames() {
 
-        Map<Long, String> resultsOneAndTwo = new HashMap<Long, String>();
-        Map<Long, String> resultsOneAndThree = new HashMap<Long, String>();
-        List<Map<Long,String>> mapsList = new ArrayList<Map<Long,String>>();
+        JSONObject jsonObject = this.parseFile();
+        JSONArray gamesArray = this.getArrayOfGames(jsonObject);
+        Map<String, JSONArray> dataMap = new HashMap<>();
+        this.putDatesAndDataFromJsonArrayIntoMap(gamesArray,dataMap);
+
+        return dataMap;
+    }
+
+    // This method is used for test purposes
+    public Map<String, JSONArray> getResultsForConfirmation(String mergeString) {
 
         JSONObject jsonContent = parseFile();
+        JSONObject oneAndTwoComparisonResults = (JSONObject) jsonContent.get(mergeString);
+        JSONArray gamesArray = (JSONArray) this.getArrayOfGames(oneAndTwoComparisonResults);
 
-        JSONObject oneAndTwoComparisonResults = (JSONObject) jsonContent.get("mergeOne&Two");
-        JSONArray gamesArray = (JSONArray) oneAndTwoComparisonResults.get("games");
+        Map<String, JSONArray> resultsMap = new HashMap<String, JSONArray>();
+        this.putDatesAndDataFromJsonArrayIntoMap(gamesArray,resultsMap);
 
-        for (int i = 0; i < gamesArray.size(); i++) {
+        return resultsMap;
+    }
 
-            JSONObject gameObject = (JSONObject) gamesArray.get(i);
+    private void putDatesAndDataFromJsonArrayIntoMap(JSONArray arr, Map<String, JSONArray> map) {
+        for (Object game : arr) {
+            JSONObject gameObject = (JSONObject) game;
             String date = (String) gameObject.get("title");
-
             JSONArray dataArray = (JSONArray) gameObject.get("data");
-
-            for (int j = 0; j < dataArray.size(); j++) {
-
-                JSONObject dataObject = (JSONObject) dataArray.get(j);
-                Long id = (Long) dataObject.get("id");
-                resultsOneAndTwo.put(id, date);
-            }
+            map.put(date, dataArray);
         }
-
-        JSONObject comparisonResultsOneAndThree = (JSONObject) jsonContent.get("mergeOne&Three");
-        JSONArray gamesArray2 = (JSONArray) comparisonResultsOneAndThree.get("games");
-
-        for (int i = 0; i < gamesArray2.size(); i++) {
-
-            JSONObject gameObject = (JSONObject) gamesArray2.get(i);
-            String date = (String) gameObject.get("title");
-
-            JSONArray dataArray = (JSONArray) gameObject.get("data");
-
-            for (int j = 0; j < dataArray.size(); j++) {
-
-                JSONObject dataObject = (JSONObject) dataArray.get(j);
-                Long id = (Long) dataObject.get("id");
-                resultsOneAndThree.put(id, date);
-            }
-        }
-
-        mapsList.add(resultsOneAndTwo);
-        mapsList.add(resultsOneAndThree);
-
-        return mapsList;
     }
 }
