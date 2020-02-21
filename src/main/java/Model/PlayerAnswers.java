@@ -1,37 +1,42 @@
 package Model;
 
+import java.util.Iterator;
+
 public final class PlayerAnswers {
-    private final long answer1;
-    private final long answer2;
-    private final long answer3;
-    private final long answer4;
-    private final long answer5;
+    private static final int SIZE = 5;
+
+    private final long[] answers;
 
     public PlayerAnswers(long answer1, long answer2, long answer3, long answer4, long answer5) {
-        this.answer1 = answer1;
-        this.answer2 = answer2;
-        this.answer3 = answer3;
-        this.answer4 = answer4;
-        this.answer5 = answer5;
+        answers = new long[SIZE];
+        answers[0] = answer1;
+        answers[1] = answer2;
+        answers[2] = answer3;
+        answers[3] = answer4;
+        answers[4] = answer5;
     }
 
     public long getAnswer1() {
-        return answer1;
+        return answers[0];
     }
 
     public long getAnswer2() {
-        return answer2;
+        return answers[1];
     }
 
     public long getAnswer3() {
-        return answer3;
+        return answers[2];
     }
 
     public long getAnswer4() {
-        return answer4;
+        return answers[3];
     }
 
     public long getAnswer5() {
-        return answer5;
+        return answers[4];
+    }
+
+    public long[] getAll(){
+        return answers;
     }
 }
