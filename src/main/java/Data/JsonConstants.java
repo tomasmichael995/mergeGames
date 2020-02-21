@@ -15,6 +15,11 @@ public class JsonConstants {
     public static final String PLAYER_2_KEY = "player2";
     public static final String GAME_ID_KEY = "gameId";
     public static final String CREATED_AT_KEY = "createdAt";
-    
+    public static final String ANSWER_1_KEY = "answer1";
+    public static final String ANSWER_2_KEY = "answer1";
+    public static final String ANSWER_3_KEY = "answer1";
+    public static final String ANSWER_4_KEY = "answer1";
+    public static final String ANSWER_5_KEY = "answer1";
+
     private JsonConstants(){}
 }

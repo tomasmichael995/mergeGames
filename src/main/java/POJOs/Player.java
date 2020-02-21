@@ -7,9 +7,9 @@ public class Player {
     private final int score;
     private final int playerLeft;
     private final String userName;
-    private final Map<String, Integer> answers;
+    private final PlayerAnswers answers;
 
-    public Player(int score, int playerLeft, String userName, Map<String, Integer> answers) {
+    public Player(int score, int playerLeft, String userName, PlayerAnswers answers) {
         this.score = score;
         this.playerLeft = playerLeft;
         this.userName = userName;
@@ -28,7 +28,7 @@ public class Player {
         return userName;
     }
 
-    public Map<String, Integer> getAnswers() {
+    public PlayerAnswers getAnswers() {
         return answers;
     }
 }
