@@ -16,10 +16,10 @@ public final class Keys {
     public static final String GAME_ID = "gameId";
     public static final String CREATED_AT = "createdAt";
     public static final String ANSWER_1 = "answer1";
-    public static final String ANSWER_2 = "answer1";
-    public static final String ANSWER_3 = "answer1";
-    public static final String ANSWER_4 = "answer1";
-    public static final String ANSWER_5 = "answer1";
+    public static final String ANSWER_2 = "answer2";
+    public static final String ANSWER_3 = "answer3";
+    public static final String ANSWER_4 = "answer4";
+    public static final String ANSWER_5 = "answer5";
 
     private Keys(){}
 }
