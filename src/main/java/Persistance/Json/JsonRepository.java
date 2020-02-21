@@ -4,6 +4,7 @@ import Model.Game;
 import Persistance.GameRepository;
 import Persistance.MergeBehavior;
 import Persistance.SaveBehavior;
+import Utils.ArrayUtils;
 
 import java.io.File;
 import java.util.Arrays;
@@ -26,35 +27,34 @@ public final class JsonRepository implements GameRepository {
     public void save(Game[] games, SaveBehavior behavior) {
         switch (behavior) {
             case APPEND:
-                // TODO: write implementation
+                Game[] savedGames = loadGames(); //saved games
+                Game[] sum = new Game[games.length  + savedGames.length];
+                ArrayUtils.copy(games,savedGames,sum);
+                save(sum);
                 break;
             default:
-                JsonWriter writer = new JsonWriter(file);
-                writer.write(games);
+                save(games);
                 break;
         }
+    }
+
+    private void save(Game[] games) {
+        JsonWriter writer = new JsonWriter(file);
+        writer.write(games);
     }
 
     @Override
     public void merge(Game[] games, MergeBehavior behavior) {
         switch (behavior) {
             case DONT_APPEND_DUPLICATE_GAMES:
-                mergeWithoutDuplicate(games, file);
+                mergeWithoutDuplicate(games);
                 break;
             default:
-                mergeAll(games, file);
+                mergeAll(games);
         }
     }
 
-    private void mergeAll(Game[] games, File file) {
-        Game[] thisRepoGames = loadGames();
-        Game[] all = new Game[thisRepoGames.length + games.length];
-
-        JsonWriter writer = new JsonWriter(file);
-        writer.write(games);
-    }
-
-    private void mergeWithoutDuplicate(Game[] games, File file) {
+    private void mergeWithoutDuplicate(Game[] games) {
         Game[] thisRepoGames = loadGames();
         Game[] all = new Game[thisRepoGames.length + games.length];
         Set<Game> uniqueGames = new HashSet<>();
@@ -62,5 +62,13 @@ public final class JsonRepository implements GameRepository {
 
         JsonWriter writer = new JsonWriter(file);
         writer.write(uniqueGames.toArray(new Game[uniqueGames.size()]));
+    }
+
+    private void mergeAll(Game[] games) {
+        Game[] savedGames = loadGames();
+        Game[] all = new Game[savedGames.length + games.length];
+
+        JsonWriter writer = new JsonWriter(file);
+        writer.write(games);
     }
 }
