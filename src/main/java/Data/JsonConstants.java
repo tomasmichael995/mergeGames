@@ -6,7 +6,7 @@ public class JsonConstants {
     public static final String DATA_KEY = "data";
     public static final String ID_KEY = "id";
     public static final String USERNAME_KEY = "username";
-    public static final String SCORE_KEY = "id";
+    public static final String SCORE_KEY = "score";
     public static final String PLAYER_LEFT_1_KEY = "playerLeft1";
     public static final String PLAYER_LEFT_2_KEY = "playerLeft2";
     public static final String ANSWERS_KEY = "answers";
