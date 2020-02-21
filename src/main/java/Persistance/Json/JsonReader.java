@@ -15,7 +15,6 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import static Persistance.Json.Keys.*;
-import static Persistance.Json.Keys.ANSWER_5;
 
 final class JsonReader {
 

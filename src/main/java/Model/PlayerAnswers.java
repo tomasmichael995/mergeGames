@@ -1,7 +1,5 @@
 package Model;
 
-import java.util.Iterator;
-
 public final class PlayerAnswers {
     private static final int SIZE = 5;
 

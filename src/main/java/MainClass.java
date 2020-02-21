@@ -1,6 +1,6 @@
+import Model.Game;
 import Persistance.GameRepository;
 import Persistance.Json.JsonRepository;
-import Model.Game;
 
 import java.io.IOException;
 
