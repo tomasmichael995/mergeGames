@@ -7,5 +7,5 @@ public interface GameRepository {
 
     void save(Game[] games, String filePath);
 
-    void merge(Game[] games, MergeBehavior behavior);
+    void merge(Game[] games, String filePath, MergeBehavior behavior);
 }

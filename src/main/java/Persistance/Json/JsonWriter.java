@@ -22,4 +22,13 @@ final class JsonWriter {
             e.printStackTrace();
         }
     }
+
+    public void append(Game[] games) {
+        try (FileWriter wr = new FileWriter(file)) {
+            JSONObject root = JsonModelWrapper.wrapIntoJsonObject(games);
+            wr.append(root.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
