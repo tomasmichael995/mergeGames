@@ -1,7 +1,5 @@
 package Utils;
 
-import Model.Game;
-
 public final class ArrayUtils {
 
     private ArrayUtils() {

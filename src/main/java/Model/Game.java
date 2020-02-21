@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-public final class Game {
+public final class Game implements Comparable<Game> {
     private final String title;
     private final List<GameRound> rounds;
 
@@ -45,5 +45,15 @@ public final class Game {
         int titleHash = Objects.hash(getTitle()) + 7;
         int roundsHash = Arrays.hashCode(getRounds()) + 31;
         return titleHash * roundsHash;
+    }
+
+    @Override
+    public int compareTo(Game o) {
+        if (hashCode() < o.hashCode()) {
+            return -1;
+        } else if (hashCode() > o.hashCode()) {
+            return 1;
+        }
+        return 0;
     }
 }

@@ -27,8 +27,8 @@ public final class JsonRepository implements GameRepository {
         switch (behavior) {
             case APPEND:
                 Game[] savedGames = loadGames(); //saved games
-                Game[] sum = new Game[games.length  + savedGames.length];
-                ArrayUtils.copy(games,savedGames,sum);
+                Game[] sum = new Game[games.length + savedGames.length];
+                ArrayUtils.copy(games, savedGames, sum);
                 save(sum);
                 break;
             default:
@@ -43,16 +43,14 @@ public final class JsonRepository implements GameRepository {
 
     @Override
     public void merge(Game[] games) {
+        Game[] savedGames = loadGames();
+        Game[] sum = new Game[savedGames.length + games.length];
+        ArrayUtils.copy(games, savedGames, sum);
 
-    }
+        Set<Game> gameSet = new HashSet<>();
+        gameSet.addAll(Arrays.asList(sum));
 
-    private void mergeWithoutDuplicate(Game[] games) {
-        Game[] thisRepoGames = loadGames();
-        Game[] all = new Game[thisRepoGames.length + games.length];
-        Set<Game> uniqueGames = new HashSet<>();
-        uniqueGames.addAll(Arrays.asList(all));
-
-        JsonWriter writer = new JsonWriter(file);
-        writer.write(uniqueGames.toArray(new Game[uniqueGames.size()]));
+        Game[] uniqueGames = gameSet.toArray(new Game[gameSet.size()]);
+        save(uniqueGames);
     }
 }
