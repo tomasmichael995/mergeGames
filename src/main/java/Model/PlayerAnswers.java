@@ -1,6 +1,6 @@
-package POJOs;
+package Model;
 
-public class PlayerAnswers {
+public final class PlayerAnswers {
     private final long answer1;
     private final long answer2;
     private final long answer3;

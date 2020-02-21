@@ -1,13 +1,13 @@
-package POJOs;
+package Model;
 
-public class GameData {
-    private long id;
-    private long points;
-    private String gameId;
-    private String createdAt;
-    private Player player1, player2;
+public final class GameRound {
+    private final long id;
+    private final long points;
+    private final String gameId;
+    private final String createdAt;
+    private final Player player1, player2;
 
-    public GameData(long id, long points, String gameId, String createdAt, Player player1, Player player2) {
+    public GameRound(long id, long points, String gameId, String createdAt, Player player1, Player player2) {
         this.id = id;
         this.points = points;
         this.gameId = gameId;

@@ -1,6 +1,6 @@
 import Data.GameRepository;
 import Data.JsonRepository;
-import POJOs.Game;
+import Model.Game;
 
 import java.io.IOException;
 

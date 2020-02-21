@@ -1,6 +1,6 @@
 package Data;
 
-import POJOs.Game;
+import Model.Game;
 
 public interface GameRepository {
     Game[] loadGames();

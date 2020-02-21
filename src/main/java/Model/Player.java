@@ -1,9 +1,6 @@
-package POJOs;
+package Model;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class Player {
+public final class Player {
     private final long score;
     private final long playerLeft;
     private final String userName;
