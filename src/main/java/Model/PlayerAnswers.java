@@ -36,7 +36,7 @@ public final class PlayerAnswers {
         return answers[4];
     }
 
-    public long[] getAll(){
+    public long[] getAll() {
         return answers;
     }
 }

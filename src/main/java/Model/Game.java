@@ -22,7 +22,7 @@ public final class Game {
         return rounds.iterator();
     }
 
-    public void add(GameRound round){
+    public void add(GameRound round) {
         rounds.add(round);
     }
 
