@@ -7,17 +7,17 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-final class JsonWriter {
+class JsonAppender {
     private final File file;
 
-    public JsonWriter(File file) {
+    public JsonAppender(File file) {
         this.file = file;
     }
 
-    public void write(Game[] games) {
+    public void append(Game[] games) {
         try (FileWriter wr = new FileWriter(file)) {
             JSONObject root = JsonModelWrapper.wrapIntoJsonObject(games);
-            wr.write(root.toString());
+            wr.append(root.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }

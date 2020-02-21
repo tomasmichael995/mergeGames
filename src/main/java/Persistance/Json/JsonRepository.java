@@ -28,19 +28,21 @@ public final class JsonRepository implements GameRepository {
 
     @Override
     public void merge(Game[] games, String filePath, MergeBehavior behavior) {
-        switch (behavior){
+        File file = new File(filePath);
+
+        switch (behavior) {
             case DONT_APPEND_DUPLICATE_GAMES:
-                mergeNoDuplicate(games);
+                mergeWithoutDuplicate(games, file);
                 break;
             default:
-                mergeAll(games);
+                mergeAll(games, file);
         }
     }
 
-    private void mergeAll(Game[] games) {
+    private void mergeAll(Game[] games, File file) {
 
     }
 
-    private void mergeNoDuplicate(Game[] games) {
+    private void mergeWithoutDuplicate(Game[] games, File file) {
     }
 }
