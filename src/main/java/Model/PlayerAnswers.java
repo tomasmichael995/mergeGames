@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Arrays;
+
 public final class PlayerAnswers {
     private static final int SIZE = 5;
 
@@ -36,5 +38,18 @@ public final class PlayerAnswers {
 
     public long[] getAll() {
         return answers;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PlayerAnswers that = (PlayerAnswers) o;
+        return Arrays.equals(answers, that.answers);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(answers);
     }
 }

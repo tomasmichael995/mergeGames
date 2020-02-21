@@ -3,6 +3,7 @@ package Model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public final class Game {
     private final String title;
@@ -28,5 +29,21 @@ public final class Game {
     public void addAll(GameRound[] rounds) {
         List<GameRound> list = Arrays.asList(rounds);
         this.rounds.addAll(list);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Game game = (Game) o;
+        return Objects.equals(getTitle(), game.getTitle()) &&
+                Arrays.equals(getRounds(), game.getRounds());
+    }
+
+    @Override
+    public int hashCode() {
+        int titleHash = Objects.hash(getTitle()) + 7;
+        int roundsHash = Arrays.hashCode(getRounds()) + 31;
+        return  titleHash * roundsHash;
     }
 }

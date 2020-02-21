@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Objects;
+
 public final class GameRound {
     private final long id;
     private final long points;
@@ -38,5 +40,29 @@ public final class GameRound {
 
     public Player getPlayer2() {
         return player2;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GameRound gameRound = (GameRound) o;
+        return getId() == gameRound.getId() &&
+                getPoints() == gameRound.getPoints() &&
+                Objects.equals(getGameId(), gameRound.getGameId()) &&
+                Objects.equals(getCreatedAt(), gameRound.getCreatedAt()) &&
+                Objects.equals(getPlayer1(), gameRound.getPlayer1()) &&
+                Objects.equals(getPlayer2(), gameRound.getPlayer2());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(
+                getId(),
+                getPoints(),
+                getGameId(),
+                getCreatedAt(),
+                getPlayer1(),
+                getPlayer2());
     }
 }
