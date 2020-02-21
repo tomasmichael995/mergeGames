@@ -21,5 +21,9 @@ public final class Keys {
     public static final String ANSWER_4 = "answer4";
     public static final String ANSWER_5 = "answer5";
 
+    public static String getAnswerPrefix(){
+        return ANSWER_1.substring(ANSWER_1.length()-1);
+    }
+
     private Keys(){}
 }
