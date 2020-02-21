@@ -1,9 +1,6 @@
 package Model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public final class Game {
     private final String title;
@@ -18,8 +15,8 @@ public final class Game {
         return title;
     }
 
-    public Iterator<GameRound> getRounds() {
-        return rounds.iterator();
+    public GameRound[] getRounds() {
+        return rounds.toArray(new GameRound[rounds.size()]);
     }
 
     public void add(GameRound round) {
