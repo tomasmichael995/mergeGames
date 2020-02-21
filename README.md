@@ -1,3 +1,11 @@
 # MergeGames
 
-A small application that parses the JSON data of given external files and merging their content while removing every duplicate record found in them.
+## What is it
+MergeGames is a small Java application which parses some game data 
+and merges it with other game data, removing duplicate information. 
+
+The game information is provided from external JSON files.
+
+## Forked
+This project was forked to practise on Object Oriented Design
+principles.
