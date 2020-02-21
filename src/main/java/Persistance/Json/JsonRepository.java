@@ -3,6 +3,7 @@ package Persistance.Json;
 import Model.Game;
 import Persistance.GameRepository;
 import Persistance.MergeBehavior;
+import Persistance.SaveBehavior;
 
 import java.io.File;
 import java.util.Arrays;
@@ -10,29 +11,32 @@ import java.util.HashSet;
 import java.util.Set;
 
 public final class JsonRepository implements GameRepository {
-    private final JsonReader reader;
+    private final File file;
 
     public JsonRepository(String filePath) {
-        File file = new File(filePath);
-        reader = new JsonReader(file);
+        file = new File(filePath);
     }
 
     @Override
     public Game[] loadGames() {
-        return reader.getGames();
+        return new JsonReader(file).getGames();
     }
 
     @Override
-    public void save(Game[] games, String filePath) {
-        File file = new File(filePath);
-        JsonWriter writer = new JsonWriter(file);
-        writer.write(games);
+    public void save(Game[] games, SaveBehavior behavior) {
+        switch (behavior) {
+            case APPEND:
+                // TODO: write implementation
+                break;
+            default:
+                JsonWriter writer = new JsonWriter(file);
+                writer.write(games);
+                break;
+        }
     }
 
     @Override
-    public void merge(Game[] games, String filePath, MergeBehavior behavior) {
-        File file = new File(filePath);
-
+    public void merge(Game[] games, MergeBehavior behavior) {
         switch (behavior) {
             case DONT_APPEND_DUPLICATE_GAMES:
                 mergeWithoutDuplicate(games, file);
