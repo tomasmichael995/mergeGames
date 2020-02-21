@@ -1,6 +1,6 @@
-package Data;
+package Persistance.Json;
 
-final class JsonKeys {
+public final class Keys {
     public static final String GAMES = "games";
     public static final String TITLE = "title";
     public static final String DATA = "data";
@@ -21,5 +21,5 @@ final class JsonKeys {
     public static final String ANSWER_4 = "answer1";
     public static final String ANSWER_5 = "answer1";
 
-    private JsonKeys(){}
+    private Keys(){}
 }

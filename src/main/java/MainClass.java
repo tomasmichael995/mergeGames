@@ -1,5 +1,5 @@
-import Data.GameRepository;
-import Data.JsonRepository;
+import Persistance.GameRepository;
+import Persistance.Json.JsonRepository;
 import Model.Game;
 
 import java.io.IOException;

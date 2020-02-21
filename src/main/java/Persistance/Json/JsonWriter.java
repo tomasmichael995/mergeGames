@@ -1,4 +1,4 @@
-package Data;
+package Persistance.Json;
 
 import Model.Game;
 
@@ -12,6 +12,12 @@ final class JsonWriter {
     }
 
     public void write(Game[] games) {
+        for (Game g: games) {
+            write(g);
+        }
+    }
+
+    private void write(Game g) {
 
     }
 }

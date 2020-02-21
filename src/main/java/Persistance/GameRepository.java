@@ -1,4 +1,4 @@
-package Data;
+package Persistance;
 
 import Model.Game;
 

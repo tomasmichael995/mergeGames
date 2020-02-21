@@ -1,6 +1,7 @@
-package Data;
+package Persistance.Json;
 
 import Model.Game;
+import Persistance.GameRepository;
 
 import java.io.File;
 

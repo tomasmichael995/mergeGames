@@ -1,4 +1,4 @@
-package Data;
+package Persistance.Json;
 
 import Model.Game;
 import Model.GameRound;
@@ -14,8 +14,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import static Data.JsonKeys.*;
-import static Data.JsonKeys.ANSWER_5;
+import static Persistance.Json.Keys.*;
+import static Persistance.Json.Keys.ANSWER_5;
 
 final class JsonReader {
 
