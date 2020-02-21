@@ -23,7 +23,7 @@ public class JsonRepository implements GameRepository {
     }
 
     @Override
-    public Game[] getGames() {
+    public Game[] loadGames() {
         JSONObject json = getTopJsonObj();
         JSONArray gameObjs = (JSONArray) json.get(GAMES_KEY);
         Game[] games = new Game[gameObjs.size()];
@@ -57,5 +57,10 @@ public class JsonRepository implements GameRepository {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public void save(Game[] games) {
+
     }
 }
