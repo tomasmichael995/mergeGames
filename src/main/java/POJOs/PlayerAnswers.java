@@ -1,13 +1,13 @@
 package POJOs;
 
 public class PlayerAnswers {
-    private final int answer1;
-    private final int answer2;
-    private final int answer3;
-    private final int answer4;
-    private final int answer5;
+    private final long answer1;
+    private final long answer2;
+    private final long answer3;
+    private final long answer4;
+    private final long answer5;
 
-    public PlayerAnswers(int answer1, int answer2, int answer3, int answer4, int answer5) {
+    public PlayerAnswers(long answer1, long answer2, long answer3, long answer4, long answer5) {
         this.answer1 = answer1;
         this.answer2 = answer2;
         this.answer3 = answer3;
@@ -15,23 +15,23 @@ public class PlayerAnswers {
         this.answer5 = answer5;
     }
 
-    public int getAnswer1() {
+    public long getAnswer1() {
         return answer1;
     }
 
-    public int getAnswer2() {
+    public long getAnswer2() {
         return answer2;
     }
 
-    public int getAnswer3() {
+    public long getAnswer3() {
         return answer3;
     }
 
-    public int getAnswer4() {
+    public long getAnswer4() {
         return answer4;
     }
 
-    public int getAnswer5() {
+    public long getAnswer5() {
         return answer5;
     }
 }
