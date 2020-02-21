@@ -1,4 +1,4 @@
-import JSON.JReader;
+import Data.JReader;
 import org.json.simple.JSONArray;
 
 import java.io.File;
