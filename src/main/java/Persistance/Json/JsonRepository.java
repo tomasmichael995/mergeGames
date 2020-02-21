@@ -40,7 +40,10 @@ public final class JsonRepository implements GameRepository {
     }
 
     private void mergeAll(Game[] games, File file) {
-
+        Game[] thisRepoGames = loadGames();
+        Game[] all = new Game[thisRepoGames.length + games.length];
+        JsonWriter writer = new JsonWriter(file);
+        writer.write(games);
     }
 
     private void mergeWithoutDuplicate(Game[] games, File file) {
