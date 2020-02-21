@@ -44,6 +44,6 @@ public final class Game {
     public int hashCode() {
         int titleHash = Objects.hash(getTitle()) + 7;
         int roundsHash = Arrays.hashCode(getRounds()) + 31;
-        return  titleHash * roundsHash;
+        return titleHash * roundsHash;
     }
 }

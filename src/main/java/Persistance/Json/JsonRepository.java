@@ -2,6 +2,7 @@ package Persistance.Json;
 
 import Model.Game;
 import Persistance.GameRepository;
+import Persistance.MergeBehavior;
 
 import java.io.File;
 
@@ -23,5 +24,22 @@ public final class JsonRepository implements GameRepository {
         File file = new File(filePath);
         JsonWriter writer = new JsonWriter(file);
         writer.write(games);
+    }
+
+    @Override
+    public void merge(Game[] games, MergeBehavior behavior) {
+        switch (behavior){
+            case DONT_APPEND_DUPLICATE_GAMES:
+                mergeNoDuplicate(games);
+                break;
+            default:
+                mergeAll(games);
+        }
+    }
+
+    private void mergeAll(Game[] games) {
+    }
+
+    private void mergeNoDuplicate(Game[] games) {
     }
 }
