@@ -1,6 +1,6 @@
 package Persistance.Json;
 
-public final class Keys {
+final class Keys {
     public static final String GAMES = "games";
     public static final String TITLE = "title";
     public static final String DATA = "data";

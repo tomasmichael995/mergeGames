@@ -25,9 +25,7 @@ final class JsonReader {
     }
 
     private JSONObject initJsonFrom(File file) {
-        FileReader reader = null;
-        try {
-            reader = new FileReader(file);
+        try (FileReader reader = new FileReader(file)) {
             JSONParser parser = new JSONParser();
             return (JSONObject) parser.parse(reader);
         } catch (FileNotFoundException e) {
@@ -36,14 +34,7 @@ final class JsonReader {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                reader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
-
         return null;
     }
 

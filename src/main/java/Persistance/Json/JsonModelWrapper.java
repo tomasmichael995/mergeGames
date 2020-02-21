@@ -7,17 +7,17 @@ import Model.PlayerAnswers;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-public final class JsonModelWrapper {
+final class JsonModelWrapper {
     private JsonModelWrapper() {
     }
 
-    public static JSONObject wrapIntoJsonObject(Game[] games){
+    public static JSONObject wrapIntoJsonObject(Game[] games) {
         JSONObject obj = new JSONObject();
-        obj.put(Keys.GAMES,wrapIntoJsonArray(games));
+        obj.put(Keys.GAMES, wrapIntoJsonArray(games));
         return obj;
     }
 
-    private static JSONArray wrapIntoJsonArray(Game[] games){
+    private static JSONArray wrapIntoJsonArray(Game[] games) {
         JSONArray array = new JSONArray();
         for (Game g : games) {
             JSONObject gameObj = wrapIntoJsonObject(g);
