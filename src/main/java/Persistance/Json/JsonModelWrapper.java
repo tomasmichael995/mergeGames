@@ -89,8 +89,7 @@ final class JsonModelWrapper {
 
         for (int i = 0; i < all.length; i++) {
             String prefix = Keys.getAnswerPrefix();
-            String suffix = "" + (i + 1);
-            String key = prefix + suffix;
+            String key = prefix + (i+1);
             long value = all[i];
             answersObj.put(key, value);
         }
