@@ -1,12 +1,8 @@
 package Data;
 
 import Model.Game;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
 import java.io.File;
-
-import static Data.JsonKeys.*;
 
 public final class JsonRepository implements GameRepository {
     private final JsonReader reader;
@@ -22,7 +18,9 @@ public final class JsonRepository implements GameRepository {
     }
 
     @Override
-    public void save(Game[] games) {
-
+    public void save(Game[] games, String filePath) {
+        File file = new File(filePath);
+        JsonWriter writer = new JsonWriter(file);
+        writer.write(games);
     }
 }

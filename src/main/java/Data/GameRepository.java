@@ -5,5 +5,5 @@ import Model.Game;
 public interface GameRepository {
     Game[] loadGames();
 
-    void save(Game[] games);
+    void save(Game[] games, String filePath);
 }
