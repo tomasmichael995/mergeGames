@@ -1,5 +1,7 @@
 package JSON;
 
+import org.json.simple.JSONObject;
+
 public interface JsonReader {
-    String readJsonFrom(String file);
+    JSONObject readJsonFrom(String file);
 }
