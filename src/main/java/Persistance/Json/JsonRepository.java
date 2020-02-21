@@ -2,7 +2,6 @@ package Persistance.Json;
 
 import Model.Game;
 import Persistance.GameRepository;
-import Persistance.MergeBehavior;
 import Persistance.SaveBehavior;
 import Utils.ArrayUtils;
 
@@ -34,7 +33,6 @@ public final class JsonRepository implements GameRepository {
                 break;
             default:
                 save(games);
-                break;
         }
     }
 
@@ -44,14 +42,8 @@ public final class JsonRepository implements GameRepository {
     }
 
     @Override
-    public void merge(Game[] games, MergeBehavior behavior) {
-        switch (behavior) {
-            case DONT_APPEND_DUPLICATE_GAMES:
-                mergeWithoutDuplicate(games);
-                break;
-            default:
-                mergeAll(games);
-        }
+    public void merge(Game[] games) {
+
     }
 
     private void mergeWithoutDuplicate(Game[] games) {
@@ -62,13 +54,5 @@ public final class JsonRepository implements GameRepository {
 
         JsonWriter writer = new JsonWriter(file);
         writer.write(uniqueGames.toArray(new Game[uniqueGames.size()]));
-    }
-
-    private void mergeAll(Game[] games) {
-        Game[] savedGames = loadGames();
-        Game[] all = new Game[savedGames.length + games.length];
-
-        JsonWriter writer = new JsonWriter(file);
-        writer.write(games);
     }
 }

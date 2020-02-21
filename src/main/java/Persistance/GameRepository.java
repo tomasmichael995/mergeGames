@@ -7,5 +7,5 @@ public interface GameRepository {
 
     void save(Game[] games, SaveBehavior behavior);
 
-    void merge(Game[] games, MergeBehavior behavior);
+    void merge(Game[] games);
 }

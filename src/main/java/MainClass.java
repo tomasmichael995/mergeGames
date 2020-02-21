@@ -1,7 +1,6 @@
 import Model.Game;
 import Persistance.GameRepository;
 import Persistance.Json.JsonRepository;
-import Persistance.MergeBehavior;
 import Persistance.SaveBehavior;
 
 import java.io.IOException;
