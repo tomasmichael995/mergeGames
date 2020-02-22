@@ -1,6 +1,6 @@
 package Json;
 
-final class Keys {
+final class ModelKey {
     public static final String GAMES = "games";
     public static final String TITLE = "title";
     public static final String DATA = "data";
@@ -25,6 +25,6 @@ final class Keys {
         return "answer";
     }
 
-    private Keys() {
+    private ModelKey() {
     }
 }

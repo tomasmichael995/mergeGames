@@ -13,7 +13,7 @@ final class JsonModelWrapper {
 
     public static JSONObject wrapIntoJsonObject(Game[] games) {
         JSONObject obj = new JSONObject();
-        obj.put(Keys.GAMES, wrapIntoJsonArray(games));
+        obj.put(ModelKey.GAMES, wrapIntoJsonArray(games));
         return obj;
     }
 
@@ -28,9 +28,9 @@ final class JsonModelWrapper {
 
     private static JSONObject wrapIntoJsonObject(Game game) {
         JSONObject gameObj = new JSONObject();
-        gameObj.put(Keys.TITLE, game.getTitle());
+        gameObj.put(ModelKey.TITLE, game.getTitle());
         JSONArray roundsArray = wrapIntoJsonArray(game.getRounds());
-        gameObj.put(Keys.DATA, roundsArray);
+        gameObj.put(ModelKey.DATA, roundsArray);
         return gameObj;
     }
 
@@ -45,12 +45,12 @@ final class JsonModelWrapper {
     private static JSONObject wrapIntoJsonObject(GameRound round) {
         JSONObject obj = new JSONObject();
 
-        obj.put(Keys.ID, round.getId());
-        obj.put(Keys.GAME_ID, round.getGameId());
-        obj.put(Keys.CREATED_AT, round.getCreatedAt());
-        obj.put(Keys.POINTS, round.getPoints());
-        obj.put(Keys.PLAYER_1, wrapIntoJsonObject(round.getPlayer1(), true));
-        obj.put(Keys.PLAYER_2, wrapIntoJsonObject(round.getPlayer2(), false));
+        obj.put(ModelKey.ID, round.getId());
+        obj.put(ModelKey.GAME_ID, round.getGameId());
+        obj.put(ModelKey.CREATED_AT, round.getCreatedAt());
+        obj.put(ModelKey.POINTS, round.getPoints());
+        obj.put(ModelKey.PLAYER_1, wrapIntoJsonObject(round.getPlayer1(), true));
+        obj.put(ModelKey.PLAYER_2, wrapIntoJsonObject(round.getPlayer2(), false));
 
         return obj;
     }
@@ -68,16 +68,16 @@ final class JsonModelWrapper {
     private static JSONObject wrapIntoJsonObject(Player player, boolean isPlayer1) {
         JSONObject obj = new JSONObject();
 
-        obj.put(Keys.USERNAME, player.getUserName());
-        obj.put(Keys.SCORE, player.getScore());
+        obj.put(ModelKey.USERNAME, player.getUserName());
+        obj.put(ModelKey.SCORE, player.getScore());
         JSONObject answers = wrapIntoJsonObject(player.getAnswers());
-        obj.put(Keys.ANSWERS, answers);
+        obj.put(ModelKey.ANSWERS, answers);
 
         // TODO: design flaw, fix
         if (isPlayer1) {
-            obj.put(Keys.PLAYER_LEFT_1, player.getPlayerLeft());
+            obj.put(ModelKey.PLAYER_LEFT_1, player.getPlayerLeft());
         } else {
-            obj.put(Keys.PLAYER_LEFT_2, player.getPlayerLeft());
+            obj.put(ModelKey.PLAYER_LEFT_2, player.getPlayerLeft());
         }
 
         return obj;
@@ -88,7 +88,7 @@ final class JsonModelWrapper {
         long[] all = pA.getAll();
 
         for (int i = 0; i < all.length; i++) {
-            String prefix = Keys.getAnswerPrefix();
+            String prefix = ModelKey.getAnswerPrefix();
             String key = prefix + (i + 1);
             long value = all[i];
             answersObj.put(key, value);
