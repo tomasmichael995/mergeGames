@@ -16,26 +16,6 @@ public final class PlayerAnswers {
         answers[4] = answer5;
     }
 
-    public long getAnswer1() {
-        return answers[0];
-    }
-
-    public long getAnswer2() {
-        return answers[1];
-    }
-
-    public long getAnswer3() {
-        return answers[2];
-    }
-
-    public long getAnswer4() {
-        return answers[3];
-    }
-
-    public long getAnswer5() {
-        return answers[4];
-    }
-
     public long[] getAll() {
         return answers;
     }

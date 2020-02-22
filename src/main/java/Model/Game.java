@@ -22,13 +22,19 @@ public final class Game implements Comparable<Game> {
         return rounds.toArray(new GameRound[rounds.size()]);
     }
 
-    public void add(GameRound round) {
-        rounds.add(round);
-    }
-
     public void addAll(GameRound[] rounds) {
         List<GameRound> list = Arrays.asList(rounds);
         this.rounds.addAll(list);
+    }
+
+    @Override
+    public int compareTo(Game o) {
+        if (hashCode() < o.hashCode()) {
+            return -1;
+        } else if (hashCode() > o.hashCode()) {
+            return 1;
+        }
+        return 0;
     }
 
     @Override
@@ -45,15 +51,5 @@ public final class Game implements Comparable<Game> {
         int titleHash = Objects.hash(getTitle()) + 7;
         int roundsHash = Arrays.hashCode(getRounds()) + 31;
         return titleHash * roundsHash;
-    }
-
-    @Override
-    public int compareTo(Game o) {
-        if (hashCode() < o.hashCode()) {
-            return -1;
-        } else if (hashCode() > o.hashCode()) {
-            return 1;
-        }
-        return 0;
     }
 }
