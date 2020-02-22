@@ -1,4 +1,4 @@
-package Persistance.Json;
+package Json;
 
 import Model.Game;
 import Model.GameRound;
@@ -14,7 +14,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import static Persistance.Json.Keys.*;
+import static Json.Keys.*;
 
 final class JsonReader {
 
@@ -28,11 +28,9 @@ final class JsonReader {
         try (FileReader reader = new FileReader(file)) {
             JSONParser parser = new JSONParser();
             return (JSONObject) parser.parse(reader);
-        } catch (FileNotFoundException e) {
+        }catch (FileNotFoundException e) {
             System.err.println("File " + file + " not exist.");
-        } catch (ParseException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        }catch (Exception e){
             e.printStackTrace();
         }
         return null;

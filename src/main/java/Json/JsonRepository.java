@@ -1,4 +1,4 @@
-package Persistance.Json;
+package Json;
 
 import Model.Game;
 import Persistance.GameRepository;

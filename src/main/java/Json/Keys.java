@@ -1,4 +1,4 @@
-package Persistance.Json;
+package Json;
 
 final class Keys {
     public static final String GAMES = "games";
